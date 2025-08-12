@@ -1,0 +1,41 @@
+batch_size: !!python/object/apply:numpy._core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - i8
+  - false
+  - true
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  HAAAAAAAAAA=
+dense_units: 1
+dropout_rate: 0.1366869579732327
+epochs: 20
+features:
+- Open
+- High
+- Low
+- Close
+- Volume
+- RSI
+- MACD
+- BB_High
+- BB_Low
+loss: mse
+lstm_units: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  OQAAAAAAAAA=
+optimizer: adam
+validation_split: 0.1
+window_size: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  IAAAAAAAAAA=

@@ -1,0 +1,162 @@
+{
+  "results": [
+    {
+      "model_name": "Decision Tree",
+      "metrics": {
+        "mae": 294655.70997584984,
+        "mse": 215205987241.99823,
+        "rmse": 463902.99335313437,
+        "r2": 0.4895671179610174
+      },
+      "predicted_price": 800326.0242537314,
+      "training_time": 0.018334150314331055,
+      "status": "success",
+      "data_shape": [
+        6830,
+        6
+      ],
+      "features_used": [
+        "Rooms",
+        "YearBuilt",
+        "Landsize",
+        "BuildingArea",
+        "Bathroom",
+        "Car"
+      ]
+    },
+    {
+      "model_name": "XGBoost",
+      "metrics": {
+        "mae": 263430.4747437775,
+        "mse": 153110063962.72113,
+        "rmse": 391292.81102867343,
+        "r2": 0.6368483413531489
+      },
+      "predicted_price": "749927.06",
+      "training_time": 0.1642160415649414,
+      "status": "success",
+      "data_shape": [
+        6830,
+        6
+      ],
+      "features_used": [
+        "Rooms",
+        "YearBuilt",
+        "Landsize",
+        "BuildingArea",
+        "Bathroom",
+        "Car"
+      ]
+    },
+    {
+      "model_name": "Support Vector Regression",
+      "metrics": {
+        "mae": 455069.2976544837,
+        "mse": 457620295762.1862,
+        "rmse": 676476.3822648845,
+        "r2": -0.085399386136779
+      },
+      "predicted_price": 889800.6144071283,
+      "training_time": 1.8022537231445312,
+      "status": "success",
+      "data_shape": [
+        6830,
+        6
+      ],
+      "features_used": [
+        "Rooms",
+        "YearBuilt",
+        "Landsize",
+        "BuildingArea",
+        "Bathroom",
+        "Car"
+      ]
+    },
+    {
+      "model_name": "Random Forest",
+      "metrics": {
+        "mae": 270542.813351095,
+        "mse": 168660605776.74908,
+        "rmse": 410683.09653155814,
+        "r2": 0.5999650372354233
+      },
+      "predicted_price": 695424.566987043,
+      "training_time": 0.9759023189544678,
+      "status": "success",
+      "data_shape": [
+        6830,
+        6
+      ],
+      "features_used": [
+        "Rooms",
+        "YearBuilt",
+        "Landsize",
+        "BuildingArea",
+        "Bathroom",
+        "Car"
+      ]
+    },
+    {
+      "model_name": "Gradient Boosting",
+      "metrics": {
+        "mae": 271071.0219771761,
+        "mse": 172365165168.40173,
+        "rmse": 415168.83935141587,
+        "r2": 0.5911784372379079
+      },
+      "predicted_price": 641804.146197171,
+      "training_time": 1.6033070087432861,
+      "status": "success",
+      "data_shape": [
+        6830,
+        6
+      ],
+      "features_used": [
+        "Rooms",
+        "YearBuilt",
+        "Landsize",
+        "BuildingArea",
+        "Bathroom",
+        "Car"
+      ]
+    },
+    {
+      "model_name": "Bagging with Decision Tree",
+      "metrics": {
+        "mae": 285150.647941338,
+        "mse": 176574764876.09235,
+        "rmse": 420208.00191820756,
+        "r2": 0.5811939654368945
+      },
+      "predicted_price": 950560.3093009673,
+      "training_time": 0.06689596176147461,
+      "status": "success",
+      "data_shape": [
+        6830,
+        6
+      ],
+      "features_used": [
+        "Rooms",
+        "YearBuilt",
+        "Landsize",
+        "BuildingArea",
+        "Bathroom",
+        "Car"
+      ]
+    }
+  ],
+  "total_execution_time": 4.630909204483032,
+  "timestamp": "2025-07-19T11:10:21.595356",
+  "sample_house": {
+    "Rooms": 3,
+    "YearBuilt": 2010,
+    "Landsize": 500,
+    "BuildingArea": 150,
+    "Bathroom": 2,
+    "Car": 1
+  },
+  "data_shape": [
+    6830,
+    6
+  ]
+}
