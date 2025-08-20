@@ -8,7 +8,7 @@ spark = (
     .getOrCreate()
 )
 
-delta_path = "file:///C:/UpScale/AgenticAI/stock-analyzer/stream-delta-scd/deltaquery/employees_scd2"
+delta_path = "<absolute or local path whatever works for you>"
 
 df = spark.read.format("delta").load(delta_path)
 

@@ -16,7 +16,7 @@ def main():
 
     # Absolute path to your Delta table
     delta_path = (
-        "file:///C:/UpScale/AgenticAI/stock-analyzer/stream-delta-scd/deltaquery/agg_by_country"
+        "<absolute or local path whatever works for you>"
     )
 
     print("\n=== Delta Table History ===")

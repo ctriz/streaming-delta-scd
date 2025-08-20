@@ -9,8 +9,8 @@ KAFKA_BOOTSTRAP = "localhost:9092"
 TOPIC_NAME = "test_topic"
 
 # Absolute Delta path (same as reader)
-DELTA_PATH = "file:///C:/UpScale/AgenticAI/stock-analyzer/stream-delta-scd/deltaquery/agg_by_country"
-CHECKPOINT_PATH = "file:///C:/UpScale/AgenticAI/stock-analyzer/stream-delta-scd/deltaquery/_checkpoints/agg_by_country"
+DELTA_PATH = "<absolute or local path whatever works for you>"
+CHECKPOINT_PATH = "<absolute or local path whatever works for you>"
 
 
 def main():

@@ -12,7 +12,7 @@ KAFKA_BOOTSTRAP = "localhost:9092"
 TOPIC_NAME      = "test_topic_scd2"
 
 # Absolute Windows file URI
-DELTA_BASE      = "file:///C:/UpScale/AgenticAI/stock-analyzer/stream-delta-scd/deltaquery"
+DELTA_BASE      = "<absolute or local path whatever works for you>"
 DELTA_PATH      = f"{DELTA_BASE}/employees_scd2"
 CHECKPOINT_DIR  = f"{DELTA_BASE}/_checkpoints/employees_scd2"
 
