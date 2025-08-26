@@ -1,26 +1,29 @@
-# Streaming example with spark 
+﻿#  Real-Time Streaming with Kafka, Spark & Delta Lake
 
-This project uses Kafka in a docker form to initialize. You can use a standalone too. 
-The project has two functionalities - 
-Part A: 
-An ordinary producer publsihing data to the Kafka topic in a streaming fashion.
-A spark client to read and write to a delta table. Employs windows aggregaation, with watermarking and schema evolution.
-Another spark client to read the delta table. 
+This project demonstrates a real-time data streaming pipeline using Kafka, Spark Structured Streaming, and Delta Lake, with support for schema evolution, windowed aggregations, watermarking, and SCD Type 2.  
 
-Part B:
-Another producer publsihing data to the Kafka topic in a streaming fashion in a random fashion simulating new and updated records. 
-Couple of producers to publish the data with slowly changing dimensions.
-A spark client to read and write to a delta table capturing the SCD2.
+---
 
-I have given example of both Spark and DuckDB to read the DeltaLake/Parquet output.
-Also given couple of bash commands to clean up the files/env and run the spark programs wrapping the dependent jars
+## Key Features
+- **Part A: Basic Streaming Pipeline**
+  - Kafka producer publishes streaming data.  
+  - Spark Structured Streaming client ingests and writes to Delta tables.  
+  - Implements *windowed aggregation, watermarking, and schema evolution*.  
+  - Consumers (Spark / DuckDB) read results from Delta Lake.  
 
-## TechStack Used
+- **Part B: Slowly Changing Dimensions (SCD Type 2)**
+  - Kafka producer publishes random updates + new records.  
+  - Multiple producers simulate changes in dimensions.  
+  - Spark client ingests data into Delta tables with *SCD Type 2 handling*.  
+  - Delta tables can be queried using Spark or DuckDB.  
+---
 
-- Kafka
-- Spark  
-- Delta Lake
-- Docker
+## Tech Stack
+- **Apache Kafka**   
+- **Apache Spark Structured Streaming**  
+- **Delta Lake**   
+- **DuckDB** (for lightweight querying)  
+- **Docker** (containerized setup)  
 
 ## Usage
 
@@ -36,7 +39,8 @@ docker compose down && docker compose up -build
 ./run_spark.ps1 read_delta_scd2.py 
 ```
 
-## Upcoming
+## Upcoming Enhancements
 
-Airflow/Prefect to orchestrate this entire manual flow!
-Alternatively, everything into a dockerized container. On Windows + Docker the “depends_on” only gates container start, not readiness, so the producer or Spark usually comes up before Kafka is truly ready or before the topic exists. Working on making the stack race‑proof.
+-   **Airflow / Prefect Orchestration** for end-to-end pipeline automation.
+    
+-   **Fully Dockerized Deployment** (race-proof startup sequencing for Kafka + Spark)
